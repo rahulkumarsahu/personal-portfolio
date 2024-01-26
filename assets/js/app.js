@@ -145,7 +145,7 @@ let footer = $(`
                   <textarea id="textArea" name="message" placeholder="Type your Message" required></textarea>
               
                   <div id="main">
-                    <button id="lnch" type="button" value="Send" >Send</button>
+                    <button id="lnch" type="button" value="Send">Send</button>
                     <div id="lnch_btn"><i class="fas fa-space-shuttle"></i></div>
                   </div>
                 </form>
@@ -210,6 +210,7 @@ let upArrow = $(`
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   })
 `);
+
 
 $(document).ready(function () {
   // updating the color of the swiper bullets (initial update of color)
@@ -407,6 +408,14 @@ $(function submitAnimation() {
       return;
     }
     else {
+      
+      var params = {
+        from_name: name.value,
+        email_id: emailAdress.value,
+        message: text.value
+      }
+
+      emailjs.send("service_56u0ea6","template_evb7eya", params);
 
       setTimeout(function () {
         $("#lnch").addClass("launching").text("Sending");
