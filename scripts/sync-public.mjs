@@ -22,6 +22,7 @@ await Promise.all([
 ]);
 
 const staticPages = [
+  "index.html",
   "404.html",
   "case-study-cicd.html",
   "case-study-mcp.html",
