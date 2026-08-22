@@ -16,8 +16,9 @@ await Promise.all([
   cp(resolve(root, "assets", "css", "case-study.css"), resolve(publicAssets, "css", "case-study.css")),
   cp(resolve(root, "assets", "js", "portfolio.js"), resolve(publicAssets, "js", "portfolio.js")),
   cp(resolve(root, "assets", "docs", "Rahul_Kumar_Resume_JPMC.pdf"), resolve(publicAssets, "docs", "Rahul_Kumar_Resume_JPMC.pdf")),
-  cp(resolve(root, "assets", "images", "favicon.png"), resolve(publicAssets, "images", "favicon.png")),
-  cp(resolve(root, "assets", "images", "portfolio", "rahul-kumar.jpg"), resolve(publicAssets, "images", "portfolio", "rahul-kumar.jpg"))
+  cp(resolve(root, "assets", "images", "favicon-rahul.png"), resolve(publicAssets, "images", "favicon-rahul.png")),
+  cp(resolve(root, "assets", "images", "portfolio", "rahul-kumar.jpg"), resolve(publicAssets, "images", "portfolio", "rahul-kumar.jpg")),
+  cp(resolve(root, "assets", "images", "portfolio", "rahul-kumar-illustrated.png"), resolve(publicAssets, "images", "portfolio", "rahul-kumar-illustrated.png"))
 ]);
 
 const staticPages = [

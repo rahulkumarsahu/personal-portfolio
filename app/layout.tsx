@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     description: "Distributed systems, cloud platforms, and developer tooling built for scale.",
     images: ["/og.png"]
   },
-  icons: { icon: "/assets/images/favicon.png" }
+  icons: {
+    icon: [{ url: "/assets/images/favicon-rahul.png", type: "image/png", sizes: "128x128" }],
+    apple: [{ url: "/assets/images/portfolio/rahul-kumar-illustrated.png", sizes: "640x640" }]
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
