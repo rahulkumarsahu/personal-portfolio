@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="description" content="A resilient Java and Spring Boot MCP foundation for AI-assisted developer tooling." />
+    <link rel="canonical" href="https://rahulkumarsahu.github.io/personal-portfolio/case-study-mcp.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Resilient MCP Foundations — Rahul Kumar" />
+    <meta property="og:description" content="Worker pools, Redis Sentinel, resilience controls, and AI-assisted CI/CD diagnostics." />
+    <meta property="og:url" content="https://rahulkumarsahu.github.io/personal-portfolio/case-study-mcp.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Resilient MCP Foundations — Rahul Kumar" />
+    <meta name="twitter:description" content="Worker pools, Redis Sentinel, resilience controls, and AI-assisted CI/CD diagnostics." />
+    <title>Resilient MCP Foundations — Rahul Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <link rel="stylesheet" href="assets/css/case-study.css" />
+  </head>
+  <body class="case-page case-page-mcp">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Rahul Kumar, home"><span>RK</span><span class="brand-dot">.</span></a>
+      <a class="header-cta" href="index.html#work">← Back to selected work</a>
+    </header>
+
+    <main id="main">
+      <section class="case-hero">
+        <aside class="case-hero-meta reveal reveal-one">
+          <p>Case study 02</p>
+          <dl>
+            <div><dt>Focus</dt><dd>AI engineering</dd></div>
+            <div><dt>System</dt><dd>MCP server foundation</dd></div>
+            <div><dt>Role</dt><dd>Senior Software Engineer</dd></div>
+            <div><dt>Organization</dt><dd>JPMorgan Chase &amp; Co.</dd></div>
+          </dl>
+        </aside>
+        <div class="case-hero-main">
+          <p class="case-breadcrumb reveal reveal-one"><a href="index.html">Portfolio</a> / MCP foundations</p>
+          <h1 class="reveal reveal-two">AI tooling with <em>production instincts.</em></h1>
+          <p class="case-hero-intro reveal reveal-three">
+            A fault-tolerant Java and Spring Boot MCP server foundation designed for worker-pool execution,
+            highly available token caching, defensive controls, and actionable pipeline diagnostics.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-metrics" aria-label="Case study highlights">
+        <article><strong>HA</strong><p>Redis Sentinel-backed token caching for high availability.</p></article>
+        <article><strong>4</strong><p>Layered protections: rate limiting, circuit breakers, caching, and a global kill switch.</p></article>
+        <article><strong>MCP</strong><p>A reusable server starting point for AI-assisted engineering workflows.</p></article>
+      </section>
+
+      <div class="case-body">
+        <div class="case-body-inner">
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">01 / The challenge</p>
+            <div class="case-story-content">
+              <h2>AI integrations still need ordinary production discipline.</h2>
+              <p>
+                Connecting intelligent tools to engineering workflows introduces new dependencies, variable
+                workloads, shared credentials, and failure modes. The foundation needed to remain responsive
+                while protecting the wider platform from cascading issues.
+              </p>
+            </div>
+          </section>
+
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">02 / Architecture</p>
+            <div class="case-story-content">
+              <h2>Resilience designed into the service boundary.</h2>
+              <p>
+                Rahul architected a Java and Spring Boot starter template deployed across worker pools. Redis
+                Sentinel provided highly available token caching, while distributed rate limiting, circuit
+                breakers, and a global kill switch created layered protection around external and internal calls.
+              </p>
+              <ul>
+                <li>Worker pools isolate and distribute execution responsibilities.</li>
+                <li>Redis Sentinel supports highly available shared token caching.</li>
+                <li>Rate limits protect capacity under sudden or uneven demand.</li>
+                <li>Circuit breakers and global controls limit cascading failures.</li>
+              </ul>
+              <div class="architecture-panel" aria-label="Simplified MCP service flow">
+                <p>Simplified service flow</p>
+                <div class="architecture-flow">
+                  <div class="architecture-node"><span>Client</span><strong>Engineering tool</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node accent"><span>Control</span><strong>MCP gateway</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node"><span>Execute</span><strong>Worker pool</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node"><span>State</span><strong>Redis Sentinel</strong></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">03 / Applied AI</p>
+            <div class="case-story-content">
+              <h2>From a failed pipeline to an actionable next step.</h2>
+              <p>
+                A diagnostic MCP service was developed to analyze CI/CD pipeline failures, identify likely root
+                causes, and generate remediation guidance. The emphasis was practical: reduce time spent parsing
+                noisy failures and help developers move directly toward resolution.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="case-outcome">
+        <div class="case-outcome-inner reveal-on-scroll">
+          <p class="case-label">Outcome</p>
+          <blockquote>A reusable foundation where <strong>AI capability and platform reliability</strong> reinforce each other.</blockquote>
+        </div>
+      </section>
+
+      <a class="case-next" href="case-study-cloud.html">
+        <div><p>Next case study</p><h2>50 TB enterprise cloud migration</h2></div><span aria-hidden="true">↗</span>
+      </a>
+    </main>
+
+    <footer class="site-footer section-shell"><p>© <span data-current-year>2026</span> Rahul Kumar</p><p>Senior Backend Engineer · Bengaluru, India</p><a href="#main">Back to top ↑</a></footer>
+    <script type="module" src="assets/js/portfolio.js"></script>
+  </body>
+</html>

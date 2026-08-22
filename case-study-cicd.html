@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="description" content="How Rahul Kumar helped cut build and deployment times by 50% across enterprise CI/CD tooling." />
+    <link rel="canonical" href="https://rahulkumarsahu.github.io/personal-portfolio/case-study-cicd.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CI/CD Optimization Platform — Rahul Kumar" />
+    <meta property="og:description" content="DAG execution, dependency caching, and remote container builds engineered for speed and reliability." />
+    <meta property="og:url" content="https://rahulkumarsahu.github.io/personal-portfolio/case-study-cicd.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CI/CD Optimization Platform — Rahul Kumar" />
+    <meta name="twitter:description" content="DAG execution, dependency caching, and remote container builds engineered for speed and reliability." />
+    <title>CI/CD Optimization Platform — Rahul Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <link rel="stylesheet" href="assets/css/case-study.css" />
+  </head>
+  <body class="case-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Rahul Kumar, home"><span>RK</span><span class="brand-dot">.</span></a>
+      <a class="header-cta" href="index.html#work">← Back to selected work</a>
+    </header>
+
+    <main id="main">
+      <section class="case-hero">
+        <aside class="case-hero-meta reveal reveal-one">
+          <p>Case study 01</p>
+          <dl>
+            <div><dt>Focus</dt><dd>Platform engineering</dd></div>
+            <div><dt>Environment</dt><dd>Enterprise CI/CD</dd></div>
+            <div><dt>Role</dt><dd>Senior Software Engineer</dd></div>
+            <div><dt>Organization</dt><dd>JPMorgan Chase &amp; Co.</dd></div>
+          </dl>
+        </aside>
+        <div class="case-hero-main">
+          <p class="case-breadcrumb reveal reveal-one"><a href="index.html">Portfolio</a> / CI/CD optimization</p>
+          <h1 class="reveal reveal-two">The faster path from <em>commit to deployment.</em></h1>
+          <p class="case-hero-intro reveal reveal-three">
+            Engineering core components across a suite of build and deployment tools to reduce latency,
+            scale remote container workloads, and give developers a more dependable delivery experience.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-metrics" aria-label="Case study highlights">
+        <article><strong>50%</strong><p>Reduction in build and deployment time.</p></article>
+        <article><strong>3</strong><p>Core platform areas: DAG execution, dependency caching, and image building.</p></article>
+        <article><strong>IaC</strong><p>Reproducible remote-build infrastructure with Terraform and AWS.</p></article>
+      </section>
+
+      <div class="case-body">
+        <div class="case-body-inner">
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">01 / The challenge</p>
+            <div class="case-story-content">
+              <h2>Build speed was a platform problem—not a single optimization.</h2>
+              <p>
+                Enterprise delivery pipelines combine dependency resolution, scheduling, image creation,
+                infrastructure capacity, and failure recovery. Improving the experience meant addressing
+                the entire path rather than tuning one isolated step.
+              </p>
+            </div>
+          </section>
+
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">02 / Contribution</p>
+            <div class="case-story-content">
+              <h2>Engineering across execution, caching, and remote builds.</h2>
+              <p>
+                Rahul contributed core components to Lattice, a DAG-based runner; Jetbuild, a dependency
+                caching system; and Buildi, an image builder. He also provisioned scalable infrastructure
+                for remote container builds using Terraform, AWS ECS Fargate, and Kaniko.
+              </p>
+              <ul>
+                <li>DAG-based task execution for structured, parallel workflows.</li>
+                <li>Dependency caching designed to eliminate repeated work.</li>
+                <li>Remote container builds backed by elastic cloud capacity.</li>
+                <li>Pipeline diagnosis and remediation guidance for faster recovery.</li>
+              </ul>
+              <div class="architecture-panel" aria-label="Simplified delivery flow">
+                <p>Simplified platform flow</p>
+                <div class="architecture-flow">
+                  <div class="architecture-node"><span>Input</span><strong>Source commit</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node"><span>Execute</span><strong>DAG runner</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node"><span>Accelerate</span><strong>Dependency cache</strong></div>
+                  <i class="architecture-edge"></i>
+                  <div class="architecture-node accent"><span>Output</span><strong>Container image</strong></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-story-row reveal-on-scroll">
+            <p class="case-label">03 / Reliability</p>
+            <div class="case-story-content">
+              <h2>Speed matters only when the system remains dependable.</h2>
+              <p>
+                The work also addressed complex pipeline bottlenecks and system availability. Diagnostic
+                tooling was designed to analyze failures, identify likely root causes, and produce actionable
+                remediation strategies—turning failed runs into faster learning loops.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="case-outcome">
+        <div class="case-outcome-inner reveal-on-scroll">
+          <p class="case-label">Outcome</p>
+          <blockquote>Core platform improvements helped make build and deployment workflows <strong>50% faster.</strong></blockquote>
+        </div>
+      </section>
+
+      <a class="case-next" href="case-study-mcp.html">
+        <div><p>Next case study</p><h2>Resilient MCP foundations</h2></div><span aria-hidden="true">↗</span>
+      </a>
+    </main>
+
+    <footer class="site-footer section-shell"><p>© <span data-current-year>2026</span> Rahul Kumar</p><p>Senior Backend Engineer · Bengaluru, India</p><a href="#main">Back to top ↑</a></footer>
+    <script type="module" src="assets/js/portfolio.js"></script>
+  </body>
+</html>
