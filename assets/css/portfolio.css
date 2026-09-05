@@ -371,6 +371,13 @@ h1 span { display: block; color: var(--acid); }
   pointer-events: none;
 }
 
+.portrait-frame picture,
+.about-signature-art picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .portrait-frame img {
   width: 100%;
   height: 100%;

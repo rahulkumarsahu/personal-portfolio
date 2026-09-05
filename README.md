@@ -10,7 +10,11 @@ The site is intentionally built with plain HTML, CSS, and JavaScript. Node.js is
 - Three in-depth engineering case studies
 - Responsive navigation and layouts for desktop, tablet, and mobile
 - Subtle scroll, hover, and system-status animation with reduced-motion support
-- Production metadata, social preview, résumé, and legacy-page redirects
+- Responsive AVIF/WebP portraits with safe image fallbacks
+- Search metadata, ProfilePage and TechArticle structured data, sitemap, and robots policy
+- Unique 1200×630 social cards for the homepage and every case study
+- Automated link, metadata, accessibility-basics, and performance-budget checks
+- Résumé and legacy-page redirects
 
 ## Local development
 
@@ -29,3 +33,9 @@ npm run build
 ```
 
 The deployable static site is written to `dist/`. GitHub Pages deployment runs through `.github/workflows/pages.yml` on Node.js 24.
+
+Run the same production quality gate used by pull requests and deployment:
+
+```sh
+npm run check
+```

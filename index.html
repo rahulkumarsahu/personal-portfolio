@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0b0d0c" />
+    <meta name="author" content="Rahul Kumar" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta
       name="description"
       content="Rahul Kumar is a Senior Backend Engineer building resilient distributed systems, cloud platforms, and developer tooling."
@@ -13,13 +15,17 @@
     <meta property="og:title" content="Rahul Kumar — Senior Backend Engineer" />
     <meta property="og:description" content="Distributed systems, cloud platforms, and developer tooling built for scale." />
     <meta property="og:url" content="https://rahulkumarsahu.github.io/personal-portfolio/" />
-    <meta property="og:image" content="https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/social-preview.png" />
+    <meta property="og:site_name" content="Rahul Kumar — Engineering Portfolio" />
+    <meta property="og:image" content="https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/social-preview.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rahul Kumar — Senior Backend Engineer portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Rahul Kumar — Senior Backend Engineer" />
     <meta name="twitter:description" content="Distributed systems, cloud platforms, and developer tooling built for scale." />
-    <meta name="twitter:image" content="https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/social-preview.png" />
+    <meta name="twitter:image" content="https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/social-preview.jpg" />
+    <meta name="twitter:image:alt" content="Rahul Kumar — Senior Backend Engineer portfolio" />
     <title>Rahul Kumar — Senior Backend Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +35,51 @@
     />
     <link rel="icon" href="assets/images/favicon-rahul.png" type="image/png" />
     <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://rahulkumarsahu.github.io/personal-portfolio/",
+        "name": "Rahul Kumar — Senior Backend Engineer",
+        "dateModified": "2026-09-05",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://rahulkumarsahu.github.io/personal-portfolio/#rahul-kumar",
+          "name": "Rahul Kumar",
+          "jobTitle": "Senior Backend Engineer",
+          "description": "Senior Backend Engineer specializing in distributed systems, cloud platforms, CI/CD, reliability, and AI-assisted developer tooling.",
+          "image": "https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/rahul-kumar.jpg",
+          "url": "https://rahulkumarsahu.github.io/personal-portfolio/",
+          "email": "mailto:rahulkumar060995@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bengaluru",
+            "addressCountry": "IN"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "JPMorgan Chase & Co."
+          },
+          "sameAs": [
+            "https://github.com/rahulkumarsahu",
+            "https://www.linkedin.com/in/rahul-kumar-techie",
+            "https://thescalablestack.substack.com/",
+            "https://topmate.io/rahul_kumar_295"
+          ],
+          "knowsAbout": [
+            "Distributed systems",
+            "Java",
+            "Golang",
+            "Spring Boot",
+            "AWS",
+            "Kubernetes",
+            "CI/CD",
+            "Platform engineering",
+            "Model Context Protocol"
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -109,13 +160,26 @@
 
         <div class="portrait-stage reveal reveal-image">
           <div class="portrait-frame">
-            <img
-              src="assets/images/portfolio/rahul-kumar.jpg"
-              alt="Rahul Kumar, Senior Backend Engineer"
-              width="2266"
-              height="2492"
-              fetchpriority="high"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="assets/images/portfolio/rahul-kumar-640.avif 640w, assets/images/portfolio/rahul-kumar-1280.avif 1280w"
+                sizes="(max-width: 760px) 92vw, (max-width: 1080px) 48vw, 38vw"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/portfolio/rahul-kumar-640.webp 640w, assets/images/portfolio/rahul-kumar-1280.webp 1280w"
+                sizes="(max-width: 760px) 92vw, (max-width: 1080px) 48vw, 38vw"
+              />
+              <img
+                src="assets/images/portfolio/rahul-kumar.jpg"
+                alt="Rahul Kumar, Senior Backend Engineer"
+                width="1455"
+                height="1600"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
             <div class="portrait-shade" aria-hidden="true"></div>
             <div class="portrait-label">
               <span>Currently</span>
@@ -268,13 +332,18 @@
           <div class="about-copy reveal-on-scroll">
             <figure class="about-signature">
               <div class="about-signature-art">
-                <img
-                  src="assets/images/portfolio/rahul-kumar-illustrated.png"
-                  alt="Illustrated portrait of Rahul Kumar"
-                  width="640"
-                  height="640"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/avif" srcset="assets/images/portfolio/rahul-kumar-illustrated.avif" />
+                  <source type="image/webp" srcset="assets/images/portfolio/rahul-kumar-illustrated.webp" />
+                  <img
+                    src="assets/images/portfolio/rahul-kumar-illustrated.png"
+                    alt="Illustrated portrait of Rahul Kumar"
+                    width="640"
+                    height="640"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <figcaption>
                 <span>The engineer behind the systems</span>

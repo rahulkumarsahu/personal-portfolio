@@ -17,6 +17,7 @@ const port = Number(readOption("--port", process.env.PORT || "4173"));
 const siteRoot = resolve(process.cwd(), "dist");
 
 const contentTypes = {
+  ".avif": "image/avif",
   ".css": "text/css; charset=utf-8",
   ".gif": "image/gif",
   ".html": "text/html; charset=utf-8",
@@ -27,7 +28,9 @@ const contentTypes = {
   ".pdf": "application/pdf",
   ".png": "image/png",
   ".svg": "image/svg+xml",
+  ".txt": "text/plain; charset=utf-8",
   ".webp": "image/webp",
+  ".xml": "application/xml; charset=utf-8",
 };
 
 function getRelativePath(requestUrl) {

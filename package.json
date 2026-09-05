@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "node scripts/build-static.mjs && node scripts/serve.mjs",
     "build": "node scripts/build-static.mjs",
+    "validate": "node scripts/validate-site.mjs",
+    "check": "node scripts/check.mjs",
     "start": "node scripts/serve.mjs"
   }
 }
