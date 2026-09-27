@@ -155,6 +155,8 @@ const robots = await readFile(resolve(siteRoot, "robots.txt"), "utf8");
 check(robots.includes(`Sitemap: ${siteUrl}sitemap.xml`), "robots.txt: missing absolute sitemap URL");
 
 const sizeBudgets = {
+  "assets/images/portfolio/rahul-blog-1280.avif": 250_000,
+  "assets/images/portfolio/rahul-blog-1280.webp": 350_000,
   "assets/css/portfolio.css": 100_000,
   "assets/js/portfolio.js": 50_000,
   "assets/images/portfolio/rahul-kumar-1280.avif": 250_000,

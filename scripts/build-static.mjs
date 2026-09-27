@@ -19,6 +19,11 @@ const pages = [
 ];
 
 const requiredAssets = [
+  "assets/images/portfolio/rahul-blog.jpg",
+  "assets/images/portfolio/rahul-blog-640.avif",
+  "assets/images/portfolio/rahul-blog-640.webp",
+  "assets/images/portfolio/rahul-blog-1280.avif",
+  "assets/images/portfolio/rahul-blog-1280.webp",
   "assets/css/portfolio.css",
   "assets/css/case-study.css",
   "assets/js/portfolio.js",
