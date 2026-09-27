@@ -3,7 +3,7 @@ import { dirname, relative, resolve, sep } from "node:path";
 
 const projectRoot = process.cwd();
 const siteRoot = resolve(projectRoot, "dist");
-const siteUrl = "https://rahul-kumar-portfolio.vercel.app/";
+const siteUrl = "https://rahul-kumar-portfolio-flax.vercel.app/";
 const basePath = "/";
 
 const contentPages = [

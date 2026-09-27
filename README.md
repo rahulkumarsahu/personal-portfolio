@@ -42,7 +42,7 @@ npm run check
 
 ## Deploy
 
-Production: https://rahul-kumar-portfolio.vercel.app/
+Production: https://rahul-kumar-portfolio-flax.vercel.app/
 
 ```sh
 vercel deploy --prod --scope kcoding-geek

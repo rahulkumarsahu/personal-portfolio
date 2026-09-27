@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rahul-kumar-portfolio.vercel.app/sitemap.xml
+Sitemap: https://rahul-kumar-portfolio-flax.vercel.app/sitemap.xml
