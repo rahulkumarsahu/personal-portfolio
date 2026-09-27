@@ -1,4 +1,4 @@
-import { access, cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { access, cp, mkdir, rm } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const projectRoot = process.cwd();
@@ -49,7 +49,5 @@ await Promise.all([
   ...pages.map((page) => cp(resolve(projectRoot, page), resolve(outputRoot, page))),
   cp(resolve(projectRoot, "assets"), resolve(outputRoot, "assets"), { recursive: true }),
 ]);
-
-await writeFile(resolve(outputRoot, ".nojekyll"), "");
 
 console.log(`Static portfolio built in ${outputRoot}`);

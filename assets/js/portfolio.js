@@ -6,7 +6,8 @@ const header = document.querySelector(".site-header");
 const progress = document.querySelector(".scroll-progress");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 1080px)");
+let scrollScheduled = false;
 
 function updateScrollUI() {
   const scrollTop = window.scrollY;
@@ -18,51 +19,50 @@ function updateScrollUI() {
 }
 
 updateScrollUI();
-window.addEventListener("scroll", updateScrollUI, { passive: true });
+window.addEventListener("scroll", () => {
+  if (scrollScheduled) return;
+  scrollScheduled = true;
+  requestAnimationFrame(() => { updateScrollUI(); scrollScheduled = false; });
+}, { passive: true });
+window.addEventListener("resize", updateScrollUI, { passive: true });
 
-function closeMenu() {
+function closeMenu(restoreFocus = false) {
+  const wasOpen = menuToggle?.getAttribute("aria-expanded") === "true";
   menuToggle?.setAttribute("aria-expanded", "false");
   mobileNav?.classList.remove("is-open");
+  if (mobileNav) mobileNav.hidden = true;
+  menuToggle?.setAttribute("aria-label", "Open navigation");
+  if (restoreFocus && wasOpen) menuToggle?.focus();
   document.body.classList.remove("menu-open");
 }
 
 menuToggle?.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
+  if (mobileNav) mobileNav.hidden = isOpen;
   mobileNav?.classList.toggle("is-open", !isOpen);
+  menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+  if (!isOpen) mobileNav?.querySelector("a")?.focus();
   document.body.classList.toggle("menu-open", !isOpen);
 });
 
-mobileNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+mobileNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  closeMenu();
+  const target = link.getAttribute("href");
+  if (target?.startsWith("#")) {
+    const section = document.querySelector(target);
+    section?.setAttribute("tabindex", "-1");
+    section?.focus({ preventScroll: true });
+  }
+}));
+mobileViewport.addEventListener("change", () => { if (!mobileViewport.matches) closeMenu(); });
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
-});
-
-const revealItems = document.querySelectorAll(".reveal-on-scroll");
-
-if (reduceMotion.matches || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: "0px 0px -9%", threshold: 0.08 },
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
-}
-
-document.querySelectorAll(".card-spotlight").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const bounds = card.getBoundingClientRect();
-    card.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
-    card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
-  });
+  if (event.key === "Escape") closeMenu(true);
+  if (event.key !== "Tab" || menuToggle?.getAttribute("aria-expanded") !== "true") return;
+  const controls = [menuToggle, ...mobileNav.querySelectorAll("a")];
+  const current = controls.indexOf(document.activeElement);
+  if (event.shiftKey && current === 0) { event.preventDefault(); controls.at(-1).focus(); }
+  else if (!event.shiftKey && current === controls.length - 1) { event.preventDefault(); menuToggle.focus(); }
 });
 
 const navLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];

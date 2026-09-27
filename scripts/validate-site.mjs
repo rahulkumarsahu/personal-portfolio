@@ -3,8 +3,8 @@ import { dirname, relative, resolve, sep } from "node:path";
 
 const projectRoot = process.cwd();
 const siteRoot = resolve(projectRoot, "dist");
-const siteUrl = "https://rahulkumarsahu.github.io/personal-portfolio/";
-const basePath = "/personal-portfolio/";
+const siteUrl = "https://rahul-kumar-portfolio.vercel.app/";
+const basePath = "/";
 
 const contentPages = [
   "index.html",
