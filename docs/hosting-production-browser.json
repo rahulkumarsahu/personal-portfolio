@@ -1,0 +1,108 @@
+{
+  "base": "https://rahulkumarsahu.github.io/personal-portfolio/",
+  "checkedAt": "2026-10-17T15:08:49.613Z",
+  "checks": [
+    {
+      "width": 390,
+      "path": "",
+      "status": 200,
+      "images": 2
+    },
+    {
+      "width": 390,
+      "path": "case-study-cicd.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 390,
+      "path": "case-study-mcp.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 390,
+      "path": "case-study-cloud.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 390,
+      "path": "missing/nested/",
+      "status": 404,
+      "images": 0
+    },
+    {
+      "width": 390,
+      "path": "projects.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#work"
+    },
+    {
+      "width": 390,
+      "path": "experience.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#experience"
+    },
+    {
+      "width": 390,
+      "path": "education.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#experience"
+    },
+    {
+      "width": 390,
+      "path": "techstack.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#expertise"
+    },
+    {
+      "width": 1440,
+      "path": "",
+      "status": 200,
+      "images": 2
+    },
+    {
+      "width": 1440,
+      "path": "case-study-cicd.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 1440,
+      "path": "case-study-mcp.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 1440,
+      "path": "case-study-cloud.html",
+      "status": 200,
+      "images": 0
+    },
+    {
+      "width": 1440,
+      "path": "missing/nested/",
+      "status": 404,
+      "images": 0
+    },
+    {
+      "width": 1440,
+      "path": "projects.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#work"
+    },
+    {
+      "width": 1440,
+      "path": "experience.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#experience"
+    },
+    {
+      "width": 1440,
+      "path": "education.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#experience"
+    },
+    {
+      "width": 1440,
+      "path": "techstack.html",
+      "redirect": "https://rahulkumarsahu.github.io/personal-portfolio/index.html#expertise"
+    }
+  ],
+  "errors": [],
+  "resourceFailures": []
+}
