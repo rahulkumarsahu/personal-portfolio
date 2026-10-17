@@ -3,8 +3,8 @@ import { dirname, relative, resolve, sep } from "node:path";
 
 const projectRoot = process.cwd();
 const siteRoot = resolve(projectRoot, "dist");
-const siteUrl = "https://rahul-kumar-portfolio-flax.vercel.app/";
-const basePath = "/";
+const siteUrl = "https://rahulkumarsahu.github.io/personal-portfolio/";
+const basePath = "/personal-portfolio/";
 
 const contentPages = [
   "index.html",
@@ -49,6 +49,7 @@ function localReference(value, currentPage) {
   if (!pathname) return { outputPath: resolve(siteRoot, currentPage), hash };
   if (pathname.startsWith(basePath)) pathname = pathname.slice(basePath.length);
   else if (pathname.startsWith("/")) pathname = pathname.slice(1);
+  if (!pathname || pathname.endsWith("/")) pathname += "index.html";
 
   const outputPath = resolve(dirname(resolve(siteRoot, currentPage)), decodeURIComponent(pathname));
   return { outputPath, hash };
@@ -74,6 +75,7 @@ for (const [page, html] of htmlByPage) {
   check(/<meta\b[^>]*charset=/i.test(html), `${page}: missing charset`);
   check(hasMeta(html, "viewport"), `${page}: missing viewport metadata`);
   check((html.match(/<title\b/gi) || []).length === 1, `${page}: expected exactly one title`);
+  check(!html.includes("rahul-kumar-portfolio-flax.vercel.app"), `${page}: references the retired Vercel domain`);
 
   const pageIds = idsIn(html);
   check(new Set(pageIds).size === pageIds.length, `${page}: contains duplicate element IDs`);
@@ -144,6 +146,8 @@ for (const page of redirectPages) {
 }
 
 check(hasMeta(htmlByPage.get("404.html"), "robots", "noindex"), "404.html: missing noindex metadata");
+check(htmlByPage.get("404.html").includes(`<base href="${basePath}"`), "404.html: nested missing routes need the Pages base path");
+check(await fileExists(resolve(siteRoot, ".nojekyll")), "Build artifact: missing .nojekyll marker");
 
 const sitemap = await readFile(resolve(siteRoot, "sitemap.xml"), "utf8");
 for (const page of contentPages) {

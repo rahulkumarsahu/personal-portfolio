@@ -32,7 +32,9 @@ Create the production artifact with:
 npm run build
 ```
 
-The deployable static site is written to `dist/`. Vercel builds and validates the site on Node.js 24 using `npm run check`, then serves `dist/`. GitHub Actions workflows have been removed.
+The deployable static site is written to `dist/`. GitHub Actions builds and
+validates the site on Node.js 24 using `npm run check`, then publishes only
+`dist/` to GitHub Pages. No hosting credentials or Vercel account are required.
 
 Run the production quality gate before deployment:
 
@@ -42,14 +44,31 @@ npm run check
 
 ## Deploy
 
-Production: https://rahul-kumar-portfolio-flax.vercel.app/
+Production: https://rahulkumarsahu.github.io/personal-portfolio/
 
-```sh
-vercel deploy --prod --scope kcoding-geek
-```
+Push to `main` to deploy automatically, or run **Publish portfolio to GitHub
+Pages** manually from the repository's Actions tab. The repository's Pages source
+is **GitHub Actions**. Official actions are pinned to reviewed release commits;
+the build has read-only repository access and the deployment uses a short-lived
+GitHub identity rather than a personal access token. Uploaded Pages artifacts
+are retained for one day.
+
+The repository is public so GitHub Pages can host it on the free plan. Local
+environment files and generated hosting settings remain ignored. Existing
+relative links work under `/personal-portfolio/`, including the legacy-page
+redirects. Metadata, social-image URLs and the sitemap use the new production URL.
+
+Test the production base path locally at
+`http://localhost:4173/personal-portfolio/`. The custom 404 uses an explicit base
+path so its recovery link and styles also work for nested missing URLs.
+
+After the Actions deployment succeeds, `npm run verify:deployment` checks the
+live pages and referenced assets against the local build, including a nested
+custom 404. Run `npm run check` first to build the exact revision being verified.
 
 The portfolio links to The System Design Atlas, and the blog links back to this portfolio.
-Keep credentials and generated Vercel files out of Git.
+Keep credentials and generated hosting files out of Git. The System Design Atlas
+blog continues to be hosted separately on Vercel.
 
 ### Design verification
 
