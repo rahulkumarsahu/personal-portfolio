@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="theme-color" content="#080a09" />
     <meta name="author" content="Rahul Kumar" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta
       name="description"
-      content="Rahul Kumar is a Senior Backend Engineer building resilient distributed systems, cloud platforms, and developer tooling."
+      content="Rahul Kumar is a Senior Backend Engineer building resilient distributed systems, cloud platforms, CI/CD infrastructure, and developer tooling."
     />
     <link rel="canonical" href="https://rahulkumarsahu.github.io/personal-portfolio/" />
     <meta property="og:type" content="website" />
@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,400;6..96,500;6..96,600&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="assets/images/favicon-rahul.png" type="image/png" />
@@ -41,41 +41,29 @@
         "@type": "ProfilePage",
         "url": "https://rahulkumarsahu.github.io/personal-portfolio/",
         "name": "Rahul Kumar — Senior Backend Engineer",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-10-18",
         "mainEntity": {
           "@type": "Person",
           "@id": "https://rahulkumarsahu.github.io/personal-portfolio/#rahul-kumar",
           "name": "Rahul Kumar",
           "jobTitle": "Senior Backend Engineer",
           "description": "Senior Backend Engineer specializing in distributed systems, cloud platforms, CI/CD, reliability, and AI-assisted developer tooling.",
-          "image": "https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/rahul-blog.jpg",
+          "image": "https://rahulkumarsahu.github.io/personal-portfolio/assets/images/portfolio/rahul-professional.jpg",
           "url": "https://rahulkumarsahu.github.io/personal-portfolio/",
           "email": "mailto:rahulkumar060995@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bengaluru",
-            "addressCountry": "IN"
-          },
-          "worksFor": {
-            "@type": "Organization",
-            "name": "JPMorgan Chase & Co."
-          },
+          "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+          "worksFor": { "@type": "Organization", "name": "JPMorgan Chase & Co." },
           "sameAs": [
             "https://github.com/rahulkumarsahu",
             "https://www.linkedin.com/in/rahul-kumar-techie",
+            "https://system-design-atlas-theta.vercel.app/",
             "https://thescalablestack.substack.com/",
+            "https://medium.com/@rahulkumar060995",
             "https://topmate.io/rahul_kumar_295"
           ],
           "knowsAbout": [
-            "Distributed systems",
-            "Java",
-            "Golang",
-            "Spring Boot",
-            "AWS",
-            "Kubernetes",
-            "CI/CD",
-            "Platform engineering",
-            "Model Context Protocol"
+            "Distributed systems", "Java", "Golang", "Spring Boot", "AWS", "Kubernetes",
+            "CI/CD", "Platform engineering", "Model Context Protocol"
           ]
         }
       }
@@ -85,408 +73,226 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-progress" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Rahul Kumar, home">
-        <span class="brand-mark">RK</span><span class="brand-dot">.</span>
-      </a>
-
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Rahul Kumar, home">Rahul Kumar</a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#about">Profile</a>
+        <a href="#experience">Journey</a>
         <a href="#writing">Writing</a>
-        <a href="https://system-design-atlas-theta.vercel.app/">Blog</a>
       </nav>
-
-      <a class="header-cta" href="mailto:rahulkumar060995@gmail.com?subject=Hello%20Rahul">
-        Start a conversation <span aria-hidden="true">↗</span>
-      </a>
-
+      <a class="header-cta" href="#contact">Let’s talk</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-        <span>Menu</span>
-        <i aria-hidden="true"></i>
+        <span>Menu</span><i aria-hidden="true"></i>
       </button>
     </header>
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
       <a href="#work"><span>01</span> Work</a>
-      <a href="#experience"><span>02</span> Experience</a>
-      <a href="#expertise"><span>03</span> Expertise</a>
+      <a href="#about"><span>02</span> Profile</a>
+      <a href="#experience"><span>03</span> Journey</a>
       <a href="#writing"><span>04</span> Writing</a>
       <a href="#contact"><span>05</span> Contact</a>
-      <a href="https://system-design-atlas-theta.vercel.app/">Read the blog <span aria-hidden="true">↗</span></a>
+      <a href="https://system-design-atlas-theta.vercel.app/" target="_blank" rel="noreferrer">Open the Atlas</a>
     </nav>
+
+    <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause animations">
+      <span class="motion-bars" aria-hidden="true"><i></i><i></i></span>
+      <span class="motion-copy">Motion <strong>on</strong></span>
+    </button>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title" class="reveal reveal-two">
-            I build backend systems that
-            <span>hold up under pressure.</span>
-          </h1>
+        <div class="hero-status hero-status-left" aria-hidden="true"><i></i><span>Senior backend engineer</span></div>
+        <p class="hero-status hero-status-right">Bengaluru, India · Building beyond the request</p>
 
-          <p class="hero-intro reveal reveal-three">
-            I’m Rahul, a Senior Backend Engineer (SDE3) with 8+ years of experience engineering distributed
-            platforms, cloud infrastructure, and developer tooling at scale.
-          </p>
+        <div class="hero-portrait" data-parallax-stage>
+          <div class="portrait-signal" aria-hidden="true"></div>
+          <picture>
+            <source type="image/avif" srcset="assets/images/portfolio/rahul-professional-640.avif 640w, assets/images/portfolio/rahul-professional-1280.avif 1122w" sizes="(max-width: 760px) 86vw, 46vw" />
+            <source type="image/webp" srcset="assets/images/portfolio/rahul-professional-640.webp 640w, assets/images/portfolio/rahul-professional-1280.webp 1122w" sizes="(max-width: 760px) 86vw, 46vw" />
+            <img src="assets/images/portfolio/rahul-professional.jpg" alt="Rahul Kumar, Senior Backend Engineer" width="1122" height="1402" fetchpriority="high" decoding="async" />
+          </picture>
+          <div class="portrait-grid" aria-hidden="true"></div>
+          <p class="portrait-code" aria-hidden="true">JAVA · GOLANG · AWS · KUBERNETES</p>
+        </div>
 
-          <div class="hero-actions reveal reveal-four">
-            <a class="button button-primary" href="#work">
-              Explore selected work <span aria-hidden="true">↓</span>
-            </a>
-            <a
-              class="button button-secondary"
-              href="assets/docs/Rahul_Kumar_Resume_JPMC.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Resume <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+        <div class="hero-side-note" aria-hidden="true">
+          <span>Presence</span><strong>Build</strong><strong>Scale</strong><strong>Operate</strong>
+        </div>
 
-          <div class="hero-meta reveal reveal-five" aria-label="Professional links">
-            <a href="https://github.com/rahulkumarsahu" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/rahul-kumar-techie" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <a href="https://thescalablestack.substack.com/" target="_blank" rel="noreferrer">The Scalable Stack ↗</a>
+        <div class="hero-title-wrap">
+          <p class="hero-thesis">A calm engineering perspective on complex systems</p>
+          <h1 id="hero-title"><span>Rahul</span> <em>Kumar</em></h1>
+        </div>
+
+        <div class="hero-intro">
+          <p>I build distributed platforms, cloud infrastructure, and developer tooling that hold up under pressure.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore the work</a>
+            <a class="button button-link" href="assets/docs/Rahul_Kumar_Resume_JPMC.pdf" target="_blank" rel="noreferrer">View Resume</a>
           </div>
         </div>
 
-        <div class="portrait-stage reveal reveal-image">
-          <div class="portrait-frame">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="assets/images/portfolio/rahul-blog-640.avif 640w, assets/images/portfolio/rahul-blog-1280.avif 1122w"
-                sizes="(max-width: 760px) 92vw, (max-width: 1080px) 48vw, 38vw"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/portfolio/rahul-blog-640.webp 640w, assets/images/portfolio/rahul-blog-1280.webp 1122w"
-                sizes="(max-width: 760px) 92vw, (max-width: 1080px) 48vw, 38vw"
-              />
-              <img
-                src="assets/images/portfolio/rahul-blog.jpg"
-                alt="Rahul Kumar, Senior Backend Engineer"
-                width="1122"
-                height="1402"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </picture>
-            <div class="portrait-shade" aria-hidden="true"></div>
-            <div class="portrait-label">
-              <span>Currently</span>
-              <strong>JPMorgan Chase &amp; Co.</strong>
-            </div>
-          </div>
-
-          <p class="portrait-note">JAVA 21+ · GOLANG · AWS · KUBERNETES</p>
+        <div class="hero-footer">
+          <a href="#about">Scroll to discover</a>
+          <span>Engineering production systems since 2018</span>
+          <span>JPMC · Oracle · Mindtree</span>
         </div>
       </section>
 
-      <section class="proof-strip" aria-label="Career highlights">
-        <article>
-          <strong>8<span>+</span></strong>
-          <p>Years engineering production systems</p>
-        </article>
-        <article>
-          <strong>50<span>%</span></strong>
-          <p>Faster build and deployment workflows</p>
-        </article>
-        <article>
-          <strong>50<span> TB</span></strong>
-          <p>Enterprise data migrated to the cloud</p>
-        </article>
-        <article class="proof-company">
-          <p>Engineering experience across</p>
-          <strong>JPMC · ORACLE · MINDTREE</strong>
-        </article>
+      <section class="proof-band" aria-label="Career highlights">
+        <article class="reveal-on-scroll"><span>Eight-plus years</span><strong>Production engineering</strong><p>Backend systems, cloud platforms, and technical ownership across three chapters.</p></article>
+        <article class="reveal-on-scroll"><span>Fifty percent</span><strong>Faster delivery</strong><p>Build and deployment workflows improved through platform-level engineering.</p></article>
+        <article class="reveal-on-scroll"><span>Fifty terabytes</span><strong>Cloud migration</strong><p>Enterprise content moved across fifteen brands with control and continuity.</p></article>
+      </section>
+
+      <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+        <p class="section-marker">The engineer behind the systems</p>
+        <div class="about-heading reveal-on-scroll">
+          <h2 id="about-title">Complexity is inevitable.<br /><em>Chaos is optional.</em></h2>
+          <p>I work where backend engineering, cloud infrastructure, and developer experience meet—turning difficult operational problems into systems teams can scale, observe, and trust.</p>
+        </div>
+
+        <div class="about-detail">
+          <div class="about-portrait reveal-on-scroll">
+            <picture>
+              <source type="image/avif" srcset="assets/images/portfolio/rahul-blog-640.avif" />
+              <source type="image/webp" srcset="assets/images/portfolio/rahul-blog-640.webp" />
+              <img src="assets/images/portfolio/rahul-blog.jpg" alt="Rahul Kumar exploring a system design" width="1122" height="1402" loading="lazy" decoding="async" />
+            </picture>
+            <p>Senior Backend Engineer · SDE3<br />JPMorgan Chase &amp; Co.</p>
+          </div>
+
+          <div class="approach reveal-on-scroll">
+            <div class="approach-tabs" role="tablist" aria-label="Engineering approach">
+              <button type="button" role="tab" aria-selected="true" aria-controls="approach-build" id="tab-build">Build</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="approach-scale" id="tab-scale" tabindex="-1">Scale</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="approach-operate" id="tab-operate" tabindex="-1">Operate</button>
+            </div>
+            <div class="approach-panel" role="tabpanel" id="approach-build" aria-labelledby="tab-build">
+              <span>Give the problem structure.</span><h3>Build from clear boundaries.</h3>
+              <p>Start with the simplest architecture that can evolve: explicit contracts, observable behavior, and decisions the next engineer can understand.</p>
+            </div>
+            <div class="approach-panel" role="tabpanel" id="approach-scale" aria-labelledby="tab-scale" hidden>
+              <span>Make pressure predictable.</span><h3>Scale without losing the plot.</h3>
+              <p>Plan for changing load, partial failure, and operational ownership before complexity turns into an expensive surprise.</p>
+            </div>
+            <div class="approach-panel" role="tabpanel" id="approach-operate" aria-labelledby="tab-operate" hidden>
+              <span>Keep production boring.</span><h3>Operate with calm evidence.</h3>
+              <p>Automate the repetitive path, expose the right signals, and design recovery into the system rather than the incident playbook.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="work-section section-shell" id="work" aria-labelledby="work-title">
         <header class="section-heading reveal-on-scroll">
-          <p class="section-index">Selected work</p>
-          <div>
-            <h2 id="work-title">Systems with<br /><em>measurable impact.</em></h2>
-            <p>
-              A selection of platform and backend initiatives shaped around speed,
-              resilience, and developer experience.
-            </p>
-          </div>
+          <p class="section-marker">Selected systems</p>
+          <h2 id="work-title">Ideas are a start.<br /><em>This is the impact.</em></h2>
+          <p>Three production stories where platform thinking changed speed, resilience, or scale.</p>
         </header>
 
-        <div class="case-grid">
-          <a class="case-card case-card-wide card-spotlight reveal-on-scroll" href="case-study-cicd.html">
-            <div class="case-content">
-              <div class="case-topline">
-                <span>Platform engineering</span>
-                <span>JPMorgan Chase &amp; Co.</span>
-              </div>
-              <div>
-                <h3>Re-engineering the path from commit to deployment.</h3>
-                <p>
-                  Core engineering across DAG execution, dependency caching, and remote
-                  container-build platforms—cutting build and deployment time by 50%.
-                </p>
-              </div>
-              <div class="case-footer">
-                <ul aria-label="Technologies">
-                  <li>Java</li><li>AWS Fargate</li><li>Terraform</li><li>Kaniko</li>
-                </ul>
-                <span class="case-link">Read case study ↗</span>
-              </div>
-            </div>
-            <div class="pipeline-visual" aria-hidden="true">
-              <div class="pipeline-caption"><span>Illustrative delivery flow</span><span>Commit → deploy</span></div>
-              <div class="pipeline-track">
-                <div class="pipeline-line"></div>
-                <div class="pipeline-step"><i></i><span>Commit</span></div>
-                <div class="pipeline-step"><i></i><span>Resolve</span></div>
-                <div class="pipeline-step"><i></i><span>Build</span></div>
-                <div class="pipeline-step active"><i></i><span>Ship</span></div>
-              </div>
-
-            </div>
+        <div class="project-list">
+          <a class="project-story reveal-on-scroll" href="case-study-cicd.html">
+            <div class="project-cover"><img src="assets/images/portfolio/case-study-cicd-social.jpg" alt="CI/CD platform engineering case study cover" width="1200" height="630" loading="lazy" decoding="async" /></div>
+            <div class="project-copy"><span>Platform engineering · JPMorgan Chase &amp; Co.</span><h3>Re-engineering the path from commit to deployment.</h3><p>DAG execution, dependency caching, and remote container-build infrastructure—cutting build and deployment time by 50%.</p><strong>Read the case study</strong></div>
           </a>
 
-          <a class="case-card case-card-mcp card-spotlight reveal-on-scroll" href="case-study-mcp.html">
-            <div class="case-content">
-              <div class="case-topline"><span>AI × Reliability</span><span>2026</span></div>
-              <div>
-                <h3>A resilient MCP foundation for intelligent developer tools.</h3>
-                <p>
-                  Fault-tolerant services, highly available token caching, worker pools,
-                  and automated CI/CD failure diagnostics.
-                </p>
-              </div>
-              <div class="case-footer">
-                <ul aria-label="Technologies"><li>Spring Boot</li><li>MCP</li><li>Redis Sentinel</li></ul>
-                <span class="case-link">Read case study ↗</span>
-              </div>
-            </div>
-            <div class="mcp-terminal" aria-hidden="true">
-              <div class="terminal-bar"><i></i><i></i><i></i><span>diagnostics.mcp</span></div>
-              <code><span class="code-dim">01</span> server.connect(worker_pool)</code>
-              <code><span class="code-dim">02</span> cache.mode(<b>"sentinel"</b>)</code>
-              <code><span class="code-dim">03</span> resilience.circuit_breaker()</code>
-              <code><span class="code-dim">04</span> diagnose.pipeline_failure()</code>
-              <div class="terminal-status"><i></i> SYSTEM HEALTHY</div>
-            </div>
+          <a class="project-story project-story-reverse reveal-on-scroll" href="case-study-mcp.html">
+            <div class="project-cover"><img src="assets/images/portfolio/case-study-mcp-social.jpg" alt="Resilient MCP foundations case study cover" width="1200" height="630" loading="lazy" decoding="async" /></div>
+            <div class="project-copy"><span>AI engineering · Reliability</span><h3>A resilient foundation for intelligent developer tools.</h3><p>Fault-tolerant services, highly available caching, worker pools, and AI-assisted CI/CD failure diagnostics.</p><strong>Read the case study</strong></div>
           </a>
 
-          <a class="case-card case-card-cloud card-spotlight reveal-on-scroll" href="case-study-cloud.html">
-            <div class="case-content">
-              <div class="case-topline"><span>Cloud migration</span><span>Mindtree</span></div>
-              <div>
-                <h3>Moving enterprise content to the cloud—without losing control.</h3>
-                <p>
-                  Technical leadership for the migration of 50 TB across 15 enterprise
-                  brands from on-premises infrastructure to Adobe AEM.
-                </p>
-              </div>
-              <div class="cloud-metric" aria-hidden="true"><strong>50</strong><span>TB</span><small>15 brands migrated</small></div>
-              <div class="case-footer">
-                <ul aria-label="Focus areas"><li>Architecture</li><li>Cloud</li><li>Adobe AEM</li></ul>
-                <span class="case-link">Read case study ↗</span>
-              </div>
-            </div>
+          <a class="project-story reveal-on-scroll" href="case-study-cloud.html">
+            <div class="project-cover"><img src="assets/images/portfolio/case-study-cloud-social.jpg" alt="50 TB cloud migration case study cover" width="1200" height="630" loading="lazy" decoding="async" /></div>
+            <div class="project-copy"><span>Cloud migration · Mindtree</span><h3>Moving enterprise content without losing control.</h3><p>Technical leadership for a 50 TB migration across fifteen enterprise brands from on-premises systems to Adobe AEM.</p><strong>Read the case study</strong></div>
           </a>
         </div>
-      </section>
-
-      <section class="about-section section-shell" id="about" aria-labelledby="about-title">
-        <div class="about-kicker reveal-on-scroll">
-          <span>Behind the systems</span>
-          <i aria-hidden="true"></i>
-        </div>
-        <div class="about-layout">
-          <h2 id="about-title" class="reveal-on-scroll">
-            Complexity is inevitable.<br /><em>Chaos is optional.</em>
-          </h2>
-          <div class="about-copy reveal-on-scroll">
-            <figure class="about-signature">
-              <div class="about-signature-art">
-                <picture>
-                  <source type="image/avif" srcset="assets/images/portfolio/rahul-blog-640.avif" />
-                  <source type="image/webp" srcset="assets/images/portfolio/rahul-blog-640.webp" />
-                  <img
-                    src="assets/images/portfolio/rahul-blog.jpg"
-                    alt="Illustrated portrait of Rahul Kumar"
-                    width="1122"
-                    height="1402"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
-              <figcaption>
-                <span>The engineer behind the systems</span>
-                <strong>Rahul Kumar</strong>
-                <small>Senior Backend Engineer · Bengaluru</small>
-              </figcaption>
-            </figure>
-            <p>
-              I work where backend engineering, cloud infrastructure, and developer
-              experience meet. My role is to turn difficult operational problems into
-              systems that are easier to scale, observe, and trust.
-            </p>
-            <p>
-              From financial platforms and Kubernetes workloads to AI-assisted
-              diagnostics, I care about pragmatic architecture, calm execution, and
-              the operational details that make software last.
-            </p>
-          </div>
-        </div>
-        <ol class="principles" aria-label="Engineering approach">
-          <li class="reveal-on-scroll"><span>01</span><strong>Build</strong><p>Start with clear boundaries, strong fundamentals, and the simplest architecture that can evolve.</p></li>
-          <li class="reveal-on-scroll"><span>02</span><strong>Scale</strong><p>Design for changing load, graceful failure, and observability before complexity compounds.</p></li>
-          <li class="reveal-on-scroll"><span>03</span><strong>Operate</strong><p>Optimize the developer path, automate repetitive work, and keep production boring.</p></li>
-        </ol>
       </section>
 
       <section class="experience-section section-shell" id="experience" aria-labelledby="experience-title">
         <header class="section-heading reveal-on-scroll">
-          <p class="section-index">Experience</p>
-          <div>
-            <h2 id="experience-title">Eight years.<br /><em>Three chapters.</em></h2>
-            <p>A career shaped by increasingly complex systems, wider ownership, and platform-level impact.</p>
-          </div>
+          <p class="section-marker">Career progression</p>
+          <h2 id="experience-title">Eight years.<br /><em>Three chapters.</em></h2>
+          <p>Increasingly complex systems, wider ownership, and platform-level responsibility.</p>
         </header>
 
         <div class="timeline">
           <article class="timeline-item reveal-on-scroll">
-            <div class="timeline-period"><span>06.2022</span><span>Present</span></div>
-            <div class="timeline-role"><p>JPMorgan Chase &amp; Co.</p><h3>Senior Software Engineer <span>(SDE3)</span></h3><p>Bengaluru, India</p></div>
-            <ul>
-              <li>Engineered core components for CI/CD optimization and remote container-build platforms.</li>
-              <li>Built resilient MCP foundations and AI-assisted diagnostics for developer workflows.</li>
-              <li>Strengthened reliability with rate limiting, circuit breakers, caching, and global controls.</li>
-            </ul>
+            <p class="timeline-period"><span>2022</span><span>Present</span></p>
+            <div class="timeline-role"><span>JPMorgan Chase &amp; Co.</span><h3>Senior Software Engineer <small>SDE3</small></h3><p>Bengaluru, India</p></div>
+            <ul><li>Core engineering for CI/CD optimization and remote container-build platforms.</li><li>Resilient MCP foundations and AI-assisted diagnostics for developer workflows.</li><li>Reliability controls spanning rate limits, circuit breakers, caching, and observability.</li></ul>
           </article>
           <article class="timeline-item reveal-on-scroll">
-            <div class="timeline-period"><span>03.2021</span><span>06.2022</span></div>
-            <div class="timeline-role"><p>Oracle</p><h3>Member of Technical Staff</h3><p>Bengaluru, India</p></div>
-            <ul>
-              <li>Led architecture, proofs of concept, and technical design for core platform features.</li>
-              <li>Built Spring Boot microservices deployed with Docker, Kubernetes, and Helm.</li>
-              <li>Created observability pipelines and pod-protection mechanisms for high-traffic scaling.</li>
-            </ul>
+            <p class="timeline-period"><span>2021</span><span>2022</span></p>
+            <div class="timeline-role"><span>Oracle</span><h3>Member of Technical Staff</h3><p>Bengaluru, India</p></div>
+            <ul><li>Architecture, proofs of concept, and technical design for core platform features.</li><li>Spring Boot microservices deployed with Docker, Kubernetes, and Helm.</li><li>Observability pipelines and pod-protection mechanisms for high-traffic scaling.</li></ul>
           </article>
           <article class="timeline-item reveal-on-scroll">
-            <div class="timeline-period"><span>02.2018</span><span>02.2021</span></div>
-            <div class="timeline-role"><p>Mindtree</p><h3>Software Developer</h3><p>Bengaluru, India</p></div>
-            <ul>
-              <li>Owned mission-critical Payment, Banking, Revenue, and BOD/EOD modules.</li>
-              <li>Architected scalable RESTful services with Java and Spring Boot.</li>
-              <li>Led a 50 TB enterprise cloud migration spanning 15 brands.</li>
-            </ul>
+            <p class="timeline-period"><span>2018</span><span>2021</span></p>
+            <div class="timeline-role"><span>Mindtree</span><h3>Software Developer</h3><p>Bengaluru, India</p></div>
+            <ul><li>Ownership of payment, banking, revenue, and BOD/EOD modules.</li><li>Scalable REST services with Java and Spring Boot.</li><li>Technical leadership for a 50 TB enterprise cloud migration.</li></ul>
           </article>
         </div>
 
-        <a class="text-link reveal-on-scroll" href="assets/docs/Rahul_Kumar_Resume_JPMC.pdf" target="_blank" rel="noreferrer">
-          Read the complete Resume <span aria-hidden="true">↗</span>
-        </a>
-
-        <div class="education-note reveal-on-scroll">
-          <p class="section-index">Education</p>
-          <div>
-            <h3>Bachelor of Technology<br /><span>Electronics &amp; Telecommunication</span></h3>
-            <p>Shri Shankaracharya Technical Campus · 2013–2017 · Bhilai, Chhattisgarh</p>
-          </div>
-        </div>
+        <a class="text-link reveal-on-scroll" href="assets/docs/Rahul_Kumar_Resume_JPMC.pdf" target="_blank" rel="noreferrer">Complete Resume</a>
       </section>
 
-      <section class="expertise-section section-shell" id="expertise" aria-labelledby="expertise-title">
-        <header class="expertise-heading reveal-on-scroll">
-          <p class="section-index">Expertise</p>
-          <h2 id="expertise-title">A toolkit for<br /><em>serious systems.</em></h2>
-        </header>
-
-        <div class="expertise-grid">
-          <article class="expertise-card reveal-on-scroll">
-            <h3>Backend &amp; architecture</h3>
-            <p>Building maintainable service boundaries, distributed workflows, and APIs that remain understandable as systems grow.</p>
-            <ul><li>Java 8–21+</li><li>Golang</li><li>Spring Boot</li><li>Reactive Java</li><li>Microservices</li><li>REST APIs</li></ul>
-          </article>
-          <article class="expertise-card reveal-on-scroll">
-            <h3>Cloud &amp; platform</h3>
-            <p>Creating reproducible infrastructure and container platforms that give teams a faster, more reliable path to production.</p>
-            <ul><li>AWS</li><li>Terraform</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>ECS Fargate</li></ul>
-          </article>
-          <article class="expertise-card reveal-on-scroll">
-            <h3>Reliability &amp; delivery</h3>
-            <p>Reducing operational uncertainty with observable pipelines, defensive patterns, and delivery systems designed for recovery.</p>
-            <ul><li>CI/CD</li><li>Jenkins</li><li>Prometheus</li><li>Grafana</li><li>Redis</li><li>High availability</li></ul>
-          </article>
-          <article class="expertise-card expertise-card-accent reveal-on-scroll">
-            <h3>AI engineering</h3>
-            <p>Applying generative AI and MCP to real engineering workflows—especially diagnostics, developer productivity, and platform operations.</p>
-            <ul><li>GenAI</li><li>MCP</li><li>AWS Bedrock</li><li>AI diagnostics</li><li>GitHub Copilot</li><li>Claude</li></ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="recognition-section" aria-labelledby="recognition-title">
-        <div class="recognition-inner section-shell">
-          <header class="recognition-heading reveal-on-scroll">
-            <p class="section-index">Recognition</p>
-            <h2 id="recognition-title">Impact noticed<br /><em>across the journey.</em></h2>
+      <section class="expertise-section" id="expertise" aria-labelledby="expertise-title">
+        <div class="section-shell expertise-inner">
+          <header class="expertise-lead reveal-on-scroll">
+            <p class="section-marker">How I work</p>
+            <h2 id="expertise-title">Depth where it matters.<br /><em>Clarity everywhere else.</em></h2>
           </header>
-          <div class="recognition-list">
-            <article class="reveal-on-scroll"><span>2026</span><div><h3>Engineering Impact Recognitions</h3><p>Multiple cross-functional and departmental awards at JPMorgan Chase for major CI/CD pipeline optimizations.</p></div><strong>JPMC</strong></article>
-            <article class="reveal-on-scroll"><span>2022</span><div><h3>Performance Excellence Bonus</h3><p>Recognized at Oracle for on-time delivery of critical engineering work and backend implementations.</p></div><strong>Oracle</strong></article>
-            <article class="reveal-on-scroll"><span>2021</span><div><h3>Leadership &amp; Delivery Award</h3><p>Honored for directing a complex cloud migration across enterprise brands.</p></div><strong>Mindtree</strong></article>
-            <article class="reveal-on-scroll"><span>2019</span><div><h3>Outstanding Performer</h3><p>Recognized for backend engineering performance, accountability, and consistent quality.</p></div><strong>Mindtree</strong></article>
+
+          <div class="expertise-list">
+            <details class="reveal-on-scroll" open><summary><span>Backend &amp; architecture</span><strong>Design durable service boundaries</strong><i aria-hidden="true"></i></summary><div><p>Maintainable distributed workflows and APIs that remain understandable as systems grow.</p><ul><li>Java 8–21+</li><li>Golang</li><li>Spring Boot</li><li>Reactive Java</li><li>Microservices</li><li>REST</li></ul></div></details>
+            <details class="reveal-on-scroll"><summary><span>Cloud &amp; platform</span><strong>Build a dependable path to production</strong><i aria-hidden="true"></i></summary><div><p>Reproducible infrastructure and container platforms that improve delivery speed and confidence.</p><ul><li>AWS</li><li>Terraform</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>ECS Fargate</li></ul></div></details>
+            <details class="reveal-on-scroll"><summary><span>Reliability &amp; delivery</span><strong>Design for failure and recovery</strong><i aria-hidden="true"></i></summary><div><p>Observable pipelines, defensive patterns, and delivery systems built to recover gracefully.</p><ul><li>CI/CD</li><li>Jenkins</li><li>Prometheus</li><li>Grafana</li><li>Redis</li><li>High availability</li></ul></div></details>
+            <details class="reveal-on-scroll"><summary><span>AI engineering</span><strong>Apply intelligence to real workflows</strong><i aria-hidden="true"></i></summary><div><p>Practical GenAI and MCP integrations for diagnostics, developer productivity, and operations.</p><ul><li>GenAI</li><li>MCP</li><li>AWS Bedrock</li><li>AI diagnostics</li><li>GitHub Copilot</li><li>Claude</li></ul></div></details>
           </div>
         </div>
       </section>
 
       <section class="writing-section section-shell" id="writing" aria-labelledby="writing-title">
         <header class="section-heading reveal-on-scroll">
-          <p class="section-index">Writing &amp; teaching</p>
-          <div>
-            <h2 id="writing-title">Learning in public.<br /><em>Teaching with intent.</em></h2>
-            <p>Practical notes on system design, Java, AI, and the decisions behind scalable software.</p>
-          </div>
+          <p class="section-marker">Published thinking</p>
+          <h2 id="writing-title">Learn the code.<br /><em>Understand the system.</em></h2>
+          <p>The System Design Atlas turns architecture decisions into practical, reasoned learning paths.</p>
         </header>
 
-        <div class="publication-grid">
-          <a class="publication publication-primary reveal-on-scroll" href="https://thescalablestack.substack.com/" target="_blank" rel="noreferrer">
-            <div class="publication-top"><span>Newsletter</span><span>Substack ↗</span></div>
-            <div class="publication-mark" aria-hidden="true"><span>THE</span><strong>SCALABLE</strong><span>STACK</span></div>
-            <div><h3>The Scalable Stack</h3><p>Deep dives into Java, low-level design, system design, AI, and scalable engineering.</p></div>
-          </a>
-          <a class="publication publication-atlas reveal-on-scroll" href="https://system-design-atlas-theta.vercel.app/" target="_blank" rel="noreferrer">
-            <div class="publication-top"><span>Knowledge base</span><span>Explore ↗</span></div>
-            <div><h3>The System Design Atlas</h3><p>A structured map for understanding architecture, trade-offs, and interview-ready system design.</p></div>
-          </a>
-          <a class="publication publication-talk reveal-on-scroll" href="https://topmate.io/rahul_kumar_295" target="_blank" rel="noreferrer">
-            <div class="publication-top"><span>Mentorship</span><span>Book a conversation ↗</span></div>
-            <div><h3>Let’s talk engineering</h3><p>Backend careers, system design, cloud platforms, and practical AI tooling.</p></div>
-          </a>
+        <div class="atlas-feature reveal-on-scroll">
+          <div class="atlas-feature-copy"><span>Independent knowledge base</span><h3>The System Design Atlas</h3><p>Practical guides to DSA, Java, application design, cloud, and AI—with examples you can reason through.</p><a href="https://system-design-atlas-theta.vercel.app/" target="_blank" rel="noreferrer">Explore the Atlas</a></div>
+          <div class="atlas-feature-image">
+            <picture><source type="image/avif" srcset="assets/images/portfolio/rahul-kumar-illustrated.avif" /><source type="image/webp" srcset="assets/images/portfolio/rahul-kumar-illustrated.webp" /><img src="assets/images/portfolio/rahul-kumar-illustrated.png" alt="Rahul Kumar mapping backend system components" width="640" height="640" loading="lazy" decoding="async" /></picture>
+          </div>
+        </div>
+
+        <div class="article-grid">
+          <a class="article-card reveal-on-scroll" href="https://system-design-atlas-theta.vercel.app/posts/system-design-interview-roadmap/" target="_blank" rel="noreferrer"><span>42 min read · System design</span><h3>Stop Guessing What to Study: The System Design Interview Roadmap</h3><p>A structured route through requirements, scale, data, reliability, security, and practice.</p><strong>Read article</strong></a>
+          <a class="article-card reveal-on-scroll" href="https://system-design-atlas-theta.vercel.app/posts/system-design-foundations/" target="_blank" rel="noreferrer"><span>2 min read · Foundations</span><h3>System Design Foundations</h3><p>The requirements, numbers, data, and failure questions that come before an architecture diagram.</p><strong>Read article</strong></a>
+          <a class="article-card reveal-on-scroll" href="https://system-design-atlas-theta.vercel.app/posts/back-of-envelope-estimation/" target="_blank" rel="noreferrer"><span>2 min read · Estimation</span><h3>Back of the Envelope Estimation</h3><p>Estimate traffic, storage, bandwidth, and concurrency with simple numbers that guide design.</p><strong>Read article</strong></a>
+          <a class="article-card reveal-on-scroll" href="https://system-design-atlas-theta.vercel.app/posts/url-shortener-system-design/" target="_blank" rel="noreferrer"><span>7 min read · Case study</span><h3>URL Shortener System Design</h3><p>Design a reliable service from requirements through storage, caching, and failure handling.</p><strong>Read article</strong></a>
         </div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner section-shell reveal-on-scroll">
-          <p class="section-index">Contact</p>
-          <h2 id="contact-title">Have a hard engineering problem?</h2>
-          <a href="mailto:rahulkumar060995@gmail.com?subject=Let%E2%80%99s%20build%20something%20scalable">
-            Let’s build something scalable <span aria-hidden="true">↗</span>
-          </a>
-          <div class="contact-meta">
-            <span>Bengaluru, India · IST</span>
-            <div><a href="https://github.com/rahulkumarsahu" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/rahul-kumar-techie" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://topmate.io/rahul_kumar_295" target="_blank" rel="noreferrer">Topmate ↗</a></div>
-          </div>
+          <p class="section-marker">The next conversation</p>
+          <h2 id="contact-title">Hard problem?<br /><em>Let’s make it calmer.</em></h2>
+          <a class="contact-action" href="mailto:rahulkumar060995@gmail.com?subject=Let%E2%80%99s%20build%20something%20scalable">Start a conversation</a>
+          <p>Backend platforms · Distributed systems · Cloud reliability · Developer tooling</p>
+          <div class="contact-meta"><span>Bengaluru, India · IST</span><div><a href="https://github.com/rahulkumarsahu" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/rahul-kumar-techie" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://topmate.io/rahul_kumar_295" target="_blank" rel="noreferrer">Topmate</a></div></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer section-shell">
-      <p>© <span data-current-year>2026</span> Rahul Kumar</p>
-      <p>Building reliable systems · Improving developer platforms · Sharing what I learn</p>
-      <a href="https://system-design-atlas-theta.vercel.app/">Read my blog ↗</a>
-      <a href="#top">Back to top ↑</a>
+      <a class="footer-brand" href="#top">Rahul Kumar.</a>
+      <p>© <span data-current-year>2026</span> · Senior Backend Engineer</p>
+      <a href="https://system-design-atlas-theta.vercel.app/" target="_blank" rel="noreferrer">The System Design Atlas</a>
+      <a href="#top">Back to top</a>
     </footer>
 
     <script type="module" src="assets/js/portfolio.js"></script>

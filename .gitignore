@@ -7,3 +7,6 @@ npm-debug.log*
 .vercel/
 .vercel
 .env*
+
+# Local design-review captures
+.impeccable/review/
